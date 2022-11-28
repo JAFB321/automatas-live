@@ -3,22 +3,24 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { GameLife } from '../components/GameLife'
 import { Header } from '../components/Header'
+import { SidebarGameController } from '../components/SidebarGameController'
 
 const Home: NextPage = () => {
   return (
     <div className="h-screen bg-darkGray font-poppins">
       <Head>
         <title>Automatas Live</title>
-        <meta name="description" content="Create awesome games of life"/>
+        <meta name="description" content="Create awesome games of life" />
         <link rel="icon" href="/favicon.ico" />
 
       </Head>
 
-    <Header/>
+      <Header />
 
-    <main>
-    <GameLife/>
-    </main>
+      <main>
+        <SidebarGameController gameId='landing-game' />
+        <GameLife gameId='landing-game' />
+      </main>
 
     </div>
   )
